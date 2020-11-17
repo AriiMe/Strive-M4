@@ -1,5 +1,5 @@
 import React from 'react';
-import  { Container, Row, Card, Button} from "react-bootstrap";
+import  { Container, Row, Card, Button, Carousel} from "react-bootstrap";
 import fantasyBooks from '../data/fantasy.json'
 import historyBooks from '../data/history.json'
 import horrorBooks from '../data/horror.json'
@@ -45,11 +45,15 @@ export default class Home extends React.Component{
             <option value="SciFi">SciFi</option>
         </select>
         
+    
+       
         <Container>
+
             <Row>
                 {
                     this.state.selectedBooks.map((book, index) => <div key={index} className="row mr-4 mb-5 mt-5"> <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="{book.img}" />
+                        
+                    <Card.Img id="Card-" variant="top" src={`${book.img}`} />
                     <Card.Body>
                 <Card.Title>{book.category}</Card.Title>
                       <Card.Text>
