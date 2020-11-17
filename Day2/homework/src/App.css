@@ -41,10 +41,22 @@
   height: 15vw;
   object-fit: cover;
 }
-#navbaru{
-  background:#516395;
-  background-color: #516395;
+.navbar-form input, .form-inline input {
+	width:auto;
 }
+
+header {
+	height:280px;
+    background-color:#eee;
+}
+
+#nav.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:10;
+}
+
 
 body{
   background: #614385;  /* fallback for old browsers */
