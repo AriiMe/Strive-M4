@@ -119,9 +119,10 @@ this.state.selectedBooks.map((book, index) =>
            <Card style={{ width: '18rem', height: '49vh' }}>
              <Card.Img id="Card-img" variant="top" src={`${book.img}`} />
                 <Card.Body>
-                    <Card.Title className="mt-1 mb-2">
+                    <Card.Title className="h6 text-muted">
                         {book.category}
                     </Card.Title>
+                    <div class="dropdown-divider"></div>
                     <div className="mb-3 text-center mt-4">
                       <Card.Text>
                         {book.title}
