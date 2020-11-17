@@ -52,3 +52,67 @@ background: -webkit-linear-gradient(to right, #516395, #614385);  /* Chrome 10-2
 background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+#footer{
+  background-color: #282c34;
+  color: wheat;
+}
+
+.custom-select {
+  position: relative;
+  display: block;
+  max-width: 400px;
+  min-width: 180px;
+  margin: 0 auto;
+  border: 1px solid #3C1C78;
+  background-color: #16013E;
+  z-index: 10;
+
+}
+.custom-select select {
+  border: none;
+  outline: none;
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  margin: 0;
+  display: block;
+  width: 100%;
+  padding: 12px 55px 15px 15px;
+  font-size: 14px;
+  color: #714BB9;
+}
+.custom-select:after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  line-height: 38px;
+  content: "∨";
+  text-align: center !important;
+  color: #714BB9;
+  font-size: 24px;
+  border-left: 1px solid #3C1C78;
+  z-index: -1;
+}
+#deals{
+  text-align: center;
+  margin-top: 10vh;
+}
+.jumbotron{
+  background-image: url("https://s2.best-wallpaper.net/wallpaper/3840x2160/1705/Books-wall_3840x2160.jpg");
+  color: #8A2BE2;
+  font-size: large;
+  font-weight: 900;
+  text-shadow: 2px 2px #3C1C78;
+  background-size: cover;
+  height: 40vh;
+  align-items: center;
+  text-align: center;
+}
+#cardBuy{
+  margin-top: 10px;
+  justify-content: center;
+}
