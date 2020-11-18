@@ -46,13 +46,12 @@ export default class Home extends React.Component{
 
         return <>
        <Jumbotron>
-  <h1 className="mt-5">Hello, world!</h1>
+  <h1 className="mt-5">{this.props.title}</h1>
   <p>
-    This is a simple hero unit, a simple jumbotron-style component for calling
-    extra attention to featured content or information.
+   {this.props.subTitle}
   </p>
   <p>
-    <Button variant="primary">Learn more</Button>
+    <Button variant="success">Learn more</Button>
   </p>
 </Jumbotron>
 
@@ -117,7 +116,7 @@ this.state.selectedBooks.map((book, index) =>
  <div key={index} className="col col-sm-12 col-md-6 col-xl-4">
       <div className="row mr-4 mb-5 mt-5">
            <Card style={{ width: '18rem', height: '49vh' }}>
-             <Card.Img id="Card-img" variant="top" src={`${book.img}`} />
+             <Card.Img id="Card-img" variant="top" src={book.img} />
                 <Card.Body>
                     <Card.Title className="h6 text-muted">
                         {book.category}

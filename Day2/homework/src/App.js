@@ -9,8 +9,8 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <NavBar title="Strivesturant" />
-        <Home />
+        <NavBar/>
+        <Home title="Strivebookeroni" subTitle="YAAAAAAAAAAAAAAAAAAAAAEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEBOYYYYYYYYEEEEEEEEE"/>
       </>
     );
   }
