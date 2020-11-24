@@ -23,8 +23,14 @@ select {
   border-radius: 2px;
 }
 .img-fluid {
-  height: 130px;
-  transition: all ease 0.15s;
+  width: 100%;
+  height: 400px;
+  min-width: 250px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 10px;
 }
 div.mx-auto:hover .details,
 .details:hover,
