@@ -34,9 +34,19 @@ const NavBar = (props) => {
             <Nav.Link className="" href="/">
               Home
             </Nav.Link>
-            <Nav.Link active className="" href="/">
-              TV Shows
-            </Nav.Link>
+
+            <Link to="/TvShows">
+              <div
+                className={
+                  props.location.pathname === "/TvShows"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+              >
+                TVShows
+              </div>
+            </Link>
+
             <Link to="/Movies">
               <div
                 className={
