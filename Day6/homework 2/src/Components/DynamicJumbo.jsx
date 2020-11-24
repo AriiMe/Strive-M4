@@ -3,7 +3,7 @@
 import React from "react";
 import { Jumbotron, Container, Image } from "react-bootstrap";
 
-class Jumbo extends React.Component {
+class DynamicJumbo extends React.Component {
   render() {
     return (
       <Jumbotron
@@ -13,11 +13,12 @@ class Jumbo extends React.Component {
       >
         <embed
           type="image/svg+xml"
-          src="https://tv.giphy.com/?username=hulu"
+          src="https://giphy.com/embed/Qs75BqLW44RrP0x6qL"
           style={{
             width: "80%",
             height: "100%",
             objectFit: "cover",
+
             float: "right",
           }}
         />
@@ -25,7 +26,7 @@ class Jumbo extends React.Component {
           className="gradientOnJumbo"
           style={{
             position: "absolute",
-            left: 0,
+
             height: "100%",
             width: "100%",
           }}
@@ -35,4 +36,4 @@ class Jumbo extends React.Component {
   }
 }
 
-export default Jumbo;
+export default DynamicJumbo;

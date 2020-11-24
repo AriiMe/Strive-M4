@@ -1,5 +1,5 @@
 /** @format */
-
+import Jumbo from "./jumbo";
 import React from "react";
 import PropTypes from "prop-types";
 import CarouselItem from "./CarouselItem";
@@ -18,12 +18,15 @@ class Main extends React.Component {
     const { movie } = this.state;
     console.log(movie);
     return (
-      <Container>
-        <SearchFetch />
-        {this.movie_keys.map((movie) => (
-          <CarouselItem Title={movie}></CarouselItem>
-        ))}
-      </Container>
+      <>
+        <Jumbo />
+        <Container>
+          <SearchFetch />
+          {this.movie_keys.map((movie) => (
+            <CarouselItem Title={movie}></CarouselItem>
+          ))}
+        </Container>
+      </>
     );
   }
 }

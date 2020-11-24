@@ -23,13 +23,13 @@ class App extends React.Component {
     <Router>
       
       <Nav title="Blyatflix"/>
-      <Jumbo />
-
+      
       <Route path="/" exact  render={(props) => <Main title="Home" {...props} />} />
       <Route path="/Movies" exact  render={(props) => <Movies title="Movies" {...props} />} />
       <Route path="/RecentlyAdded" exact  render={(props) => <Recent title="Recentley Added" {...props} />} />
       <Route path="/TvShows" exact  render={(props) => <Yeet title="TvShows" {...props} />} />
-      <Route path="/MyList" exact  render={(props) => <myList title="My List" {...props} />} />
+      <Route path="/myList" exact  render={(props) => <myList title="My List" {...props} />} />
+      
       <Footer />
 
     </Router>

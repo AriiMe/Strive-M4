@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import CarouselItem from "./CarouselItem";
 import Comments from "./Comments";
 import { Container } from "react-bootstrap";
+import MoviesJumbo from "./MoviesJumbo";
 
 class Movies extends React.Component {
   state = {
@@ -12,16 +13,19 @@ class Movies extends React.Component {
     loading: false,
   };
 
-  movie_keys = ["Dragon ball", "Batmetal", "Serbian film"];
+  movie_keys = ["Dragon ball"];
   render() {
     const { movie } = this.state;
     console.log(movie);
     return (
-      <Container>
-        {this.movie_keys.map((movie) => (
-          <CarouselItem Title={movie}></CarouselItem>
-        ))}
-      </Container>
+      <>
+        <MoviesJumbo></MoviesJumbo>
+        <Container>
+          {this.movie_keys.map((movie) => (
+            <CarouselItem Title={movie}></CarouselItem>
+          ))}
+        </Container>
+      </>
     );
   }
 }

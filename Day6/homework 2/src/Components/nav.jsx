@@ -70,10 +70,17 @@ const NavBar = (props) => {
                 Recentley Added
               </div>
             </Link>
-
-            <Nav.Link className="" href="/">
-              My List
-            </Nav.Link>
+            <Link to="/myList">
+              <div
+                className={
+                  props.location.pathname === "/myList"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+              >
+                My List
+              </div>
+            </Link>
           </Nav>
 
           <Nav.Link
