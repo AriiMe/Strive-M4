@@ -7,18 +7,30 @@ import Nav from "./Components/nav";
 import Jumbo from "./Components/jumbo";
 import Main from "./Components/main";
 import Footer from "./Components/footer";
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import Movies from "./Components/Movies";
+import Recent from "./Components/RecentlyAdded";
 
-function App() {
-  return (
-    <div className='App'>
-      <Nav />
-      <Jumbo />
+
+class App extends React.Component {
+  render(){
+  return ( <>
+   
+
+    <Router>
       
-      <Main />
+      <Nav title="Blyatflix"/>
+      <Jumbo />
 
+      <Route path="/" exact  render={(props) => <Main title="Home" {...props} />} />
+      <Route path="/Movies" exact  render={(props) => <Movies title="Home" {...props} />} />
+      <Route path="/RecentlyAdded" exact  render={(props) => <Recent title="Home" {...props} />} />
+      
       <Footer />
-    </div>
+
+    </Router>
+    </>
   );
 }
-
+}
 export default App;

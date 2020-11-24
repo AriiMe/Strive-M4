@@ -1,20 +1,23 @@
+/** @format */
+
 import React from "react";
 import Searchmf from "./searchmf";
 import { Navbar, NavDropdown, Image, Nav, Button } from "react-bootstrap";
+import { Link, withRouter } from "react-router-dom";
 
-
-
-class NavBar extends React.Component {
-  render() {
-    return (
+const NavBar = (props) => {
+  return (
+    <div>
       <Navbar className=" navbar-expand-lg navbar-dark mb-0" id="nav">
-        <Navbar.Brand href="#">
-          <Image
-            style={{ height: "40px" }}
-            src="https://fontmeme.com/permalink/201120/065882ffbeb9ad7f7d80e14d53c921f0.png"
-            alt="Netflix"
-          />
-        </Navbar.Brand>
+        <Link to="/Blyatflix">
+          <Navbar.Brand>
+            <Image
+              style={{ height: "40px" }}
+              src="https://fontmeme.com/permalink/201120/065882ffbeb9ad7f7d80e14d53c921f0.png"
+              alt="Netflix"
+            />
+          </Navbar.Brand>
+        </Link>
         <Button
           className="navbar-toggler"
           type="button"
@@ -34,12 +37,30 @@ class NavBar extends React.Component {
             <Nav.Link active className="" href="/">
               TV Shows
             </Nav.Link>
-            <Nav.Link className="" href="/">
-              Movies
-            </Nav.Link>
-            <Nav.Link className="" href="/">
-              Recently Added
-            </Nav.Link>
+            <Link to="/Movies">
+              <div
+                className={
+                  props.location.pathname === "/Movies"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+              >
+                Movies
+              </div>
+            </Link>
+
+            <Link to="/RecentlyAdded">
+              <div
+                className={
+                  props.location.pathname === "/Recent"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+              >
+                Recentley Added
+              </div>
+            </Link>
+
             <Nav.Link className="" href="/">
               My List
             </Nav.Link>
@@ -55,9 +76,7 @@ class NavBar extends React.Component {
           >
             KIDS
           </Nav.Link>
-          <Nav.Link href="#">
-
-          </Nav.Link>
+          <Nav.Link href="#"></Nav.Link>
           <Nav.Item className="nav-item dropdown form-inline my-2 my-lg-0">
             <Nav.Link
               className="nav-link dropdown-toggle"
@@ -96,7 +115,8 @@ class NavBar extends React.Component {
           </Nav.Item>
         </Navbar.Collapse>
       </Navbar>
-    );
-  }
-}
-export default NavBar;
+    </div>
+  );
+};
+
+export default withRouter(NavBar);
