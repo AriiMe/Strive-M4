@@ -57,7 +57,7 @@ class DishDetails extends React.Component {
             <DishComments selectedDish={this.state.dish} />
           </div>
         ) : (
-          <h1>LOADING</h1>
+          <h1>LOADING SEXINESS YES</h1>
         )}
       </Container>
     );
