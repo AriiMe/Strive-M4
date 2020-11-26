@@ -84,6 +84,7 @@ const Login = (props) => {
               </div>
               <div className="form-group mb-4" style={{ color: "grey" }}>
                 <label for="gibCash">GIVE ME YOUR CREDIT CARD NOW </label>
+                
                 <input
                   type="text"
                   className="form-control mb-2"
@@ -92,6 +93,7 @@ const Login = (props) => {
                   required
                 />
               </div>
+              
               <label
                 className="form-group"
                 for="bdate"
@@ -213,7 +215,7 @@ const Login = (props) => {
                   </label>
                 </div>
               </div>
-
+            
               <label
                 className="form-check-label checkbox font-weight-light mt-3 mb-3 d-flex justify-content-center"
                 for="marketing"
@@ -247,6 +249,7 @@ const Login = (props) => {
                   .
                 </p>
               </label>
+
               <button
                 className="btn btn-danger col-12 col-6 mb-4 signUpBtn"
                 onClick={handleSignUp}
