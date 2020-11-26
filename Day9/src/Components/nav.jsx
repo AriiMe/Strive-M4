@@ -97,20 +97,6 @@ const NavBar = (props) => {
               </div>
             </Link>
             <div>
-              <Button>
-                {" "}
-                <Link to="/SignUp" className="text-decoration-none">
-                  <div
-                    className={
-                      location.pathname === "/SignUp"
-                        ? "nav-link active"
-                        : "nav-link"
-                    }
-                  >
-                    Sign Up
-                  </div>
-                </Link>
-              </Button>
               <Dropdown as={ButtonGroup}>
                 <Button variant="btn">
                   {" "}
@@ -129,7 +115,20 @@ const NavBar = (props) => {
                     />{" "}
                     Strive Student
                   </Dropdown.Item>
-                  <Dropdown.Item eventKey="2">Manage Profiles</Dropdown.Item>
+                  <Dropdown.Item eventKey="2">
+                    {" "}
+                    <Link to="/SignUp" className="text-decoration-none">
+                      <div
+                        className={
+                          location.pathname === "/SignUp"
+                            ? "nav-link active"
+                            : "nav-link"
+                        }
+                      >
+                        Sign Up
+                      </div>
+                    </Link>
+                  </Dropdown.Item>
                   <Dropdown.Divider />
                   <Dropdown.Item eventKey="3">Account</Dropdown.Item>
                   <Dropdown.Item eventKey="4">Help Center</Dropdown.Item>
