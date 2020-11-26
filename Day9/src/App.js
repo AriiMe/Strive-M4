@@ -8,6 +8,7 @@ import Footer from "./Components/footer";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import TvShows from "./Components/TvShows";
 import SignUp from "./Components/SignUp";
+import FunnyLogin from "./Components/FunnyLogin";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/details/:id' component={ShowDetail} />
         <Route path='/shows' exact render={(props) => <TvShows series={"s={and}&type=series"} {...props} />} />
         <Route path='/SignUp' component={SignUp} />
+        <Route path='/FunnyLogin' component={FunnyLogin} />
         <Footer />
       </Router>
     </div>

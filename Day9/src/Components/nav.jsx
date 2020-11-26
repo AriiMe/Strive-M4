@@ -99,7 +99,6 @@ const NavBar = (props) => {
             <div>
               <Dropdown as={ButtonGroup}>
                 <Button variant="btn">
-                  {" "}
                   <Image
                     src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/366be133850498.56ba69ac36858.png"
                     width="30"
@@ -112,11 +111,10 @@ const NavBar = (props) => {
                       src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/366be133850498.56ba69ac36858.png"
                       width="30"
                       height="30"
-                    />{" "}
+                    />
                     Strive Student
                   </Dropdown.Item>
                   <Dropdown.Item eventKey="2">
-                    {" "}
                     <Link to="/SignUp" className="text-decoration-none">
                       <div
                         className={
@@ -130,7 +128,19 @@ const NavBar = (props) => {
                     </Link>
                   </Dropdown.Item>
                   <Dropdown.Divider />
-                  <Dropdown.Item eventKey="3">Account</Dropdown.Item>
+                  <Dropdown.Item eventKey="3">
+                    <Link to="/FunnyLogin" className="text-decoration-none">
+                      <div
+                        className={
+                          location.pathname === "/FunnyLogin"
+                            ? "nav-link active"
+                            : "nav-link"
+                        }
+                      >
+                        FunnyLogin
+                      </div>
+                    </Link>
+                  </Dropdown.Item>
                   <Dropdown.Item eventKey="4">Help Center</Dropdown.Item>
                   <Dropdown.Item eventKey="5">
                     Sign out of Netflix
