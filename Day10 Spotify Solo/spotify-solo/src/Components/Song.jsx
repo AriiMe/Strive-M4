@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { Component } from "react";
-import { Image, Container, Row, Spinner, Col } from "react-bootstrap";
+import { Image } from "react-bootstrap";
 import { Link, withRouter } from "react-router-dom";
 
 class Song extends Component {
@@ -15,13 +15,16 @@ class Song extends Component {
 
   render() {
     return (
-      <Container>
-        <Image
-          className="img-fluid"
-          src={this.props.song.album.cover_medium}
-          alt={this.props.song.artist.name}
-        />
-
+      <div className="col text-center">
+        <a href="/album">
+          <Link to={"/album/" + this.props.song.album.id} className="nav-link">
+            <Image
+              className="img-fluid"
+              src={this.props.song.album.cover_medium}
+              alt={this.props.song.artist.name}
+            />
+          </Link>
+        </a>
         <p>
           <Link to={"/album/" + this.props.song.album.id} className="nav-link">
             {this.props.song.album.title}
@@ -34,7 +37,7 @@ class Song extends Component {
             {this.props.song.artist.name}
           </Link>
         </p>
-      </Container>
+      </div>
     );
   }
 }

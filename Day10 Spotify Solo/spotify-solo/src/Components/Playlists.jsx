@@ -2,9 +2,9 @@
 import React, { Component } from "react";
 import Yeet from "./Yeet";
 
-let Yeet = ["slipknot", "eminem", "fool", "prodigy"];
+let ayeet = ["slipknot", "eminem", "fool", "prodigy"];
 
-let Yayeet = ["infectedmushroom", "hardbassschool", "djgopnik", "rammstein"];
+let yayeet = ["infectedmushroom", "hardbassschool", "djgopnik", "rammstein"];
 
 let asuhhhhhhdude = ["carpenterbrut", "thegazette", "sum41", "noisia"];
 
@@ -31,8 +31,7 @@ class HomePage extends Component {
     let pl3 = [];
 
     while (pl1.length < 4) {
-      let artist =
-        firstPlaylist[Math.floor(Math.random() * firstPlaylist.length)];
+      let artist = ayeet[Math.floor(Math.random() * ayeet.length)];
 
       if (!pl1.includes(artist)) {
         pl1.push(artist);
@@ -40,8 +39,7 @@ class HomePage extends Component {
     }
 
     while (pl2.length < 4) {
-      let artist =
-        secondPlaylist[Math.floor(Math.random() * secondPlaylist.length)];
+      let artist = yayeet[Math.floor(Math.random() * yayeet.length)];
 
       if (!pl2.includes(artist)) {
         pl2.push(artist);
@@ -50,7 +48,7 @@ class HomePage extends Component {
 
     while (pl3.length < 4) {
       let artist =
-        thirdPlaylist[Math.floor(Math.random() * thirdPlaylist.length)];
+        asuhhhhhhdude[Math.floor(Math.random() * asuhhhhhhdude.length)];
 
       if (!pl3.includes(artist)) {
         pl3.push(artist);
@@ -135,8 +133,8 @@ class HomePage extends Component {
         <div className="col-12 col-md-9 offset-md-3 mainPage">
           <div className="row">
             <div className="col-10">
-              <div id="firstPlaylist">
-                <h2>Playlist 1</h2>
+              <div id="ayeet">
+                <h2>yesy</h2>
                 <Yeet
                   loading={this.state.loading}
                   songs={this.state.firstRow}
@@ -148,8 +146,8 @@ class HomePage extends Component {
           </div>
           <div className="row">
             <div className="col-10">
-              <div id="secondPlaylist">
-                <h2>Playlist 2</h2>
+              <div id="yayeet">
+                <h2>test2</h2>
                 <Yeet
                   loading={this.state.loading}
                   songs={this.state.thirdRow}
@@ -160,8 +158,8 @@ class HomePage extends Component {
           </div>
           <div className="row">
             <div className="col-10">
-              <div id="thirdPlaylist">
-                <h2>Playlist 3</h2>
+              <div id="asuhhhhhhdude">
+                <h2>test3</h2>
                 <Yeet
                   loading={this.state.loading}
                   songs={this.state.secondRow}

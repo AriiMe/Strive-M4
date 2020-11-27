@@ -4,12 +4,6 @@ import React from "react";
 import { Container, Row, Spinner, Col } from "react-bootstrap";
 import "./Main.css";
 
-let firstPlaylist = ["eminem", "Linkin Park", "greenday", "lorn"];
-
-let secondPlaylist = ["ladygaga", "djblyatman", "area", "nekrogoblikon"];
-
-let thirdPlaylist = ["ghostemane", "lilpeep", "killstation", "$uicideboy$"];
-
 class Songs extends React.Component {
   state = {
     songs: [],
