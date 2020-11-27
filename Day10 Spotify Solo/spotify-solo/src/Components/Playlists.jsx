@@ -2,11 +2,11 @@
 import React, { Component } from "react";
 import Yeet from "./Yeet";
 
-let ayeet = ["slipknot", "eminem", "fool", "prodigy"];
+let ayeet = ["u2", "smashmouth", "greenday", "lorn"];
 
-let yayeet = ["infectedmushroom", "hardbassschool", "djgopnik", "rammstein"];
+let yayeet = ["ladygaga", "djblyatman", "area", "nekrogoblikon"];
 
-let asuhhhhhhdude = ["carpenterbrut", "thegazette", "sum41", "noisia"];
+let asuhhhhhhdude = ["ghostemane", "lilpeep", "killstation", "$uicideboy$"];
 
 class HomePage extends Component {
   constructor(props) {

@@ -1,8 +1,10 @@
 /** @format */
 
 import React, { Component } from "react";
+import { Container } from "react-bootstrap";
 import { Link, withRouter } from "react-router-dom";
 import "./Main.css";
+import Logo from "./assets/Logo.png";
 
 export class Nav extends Component {
   render() {
@@ -10,11 +12,7 @@ export class Nav extends Component {
       <div>
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark navbar-fixed-left fixed-left d-flex flex-column position-fixed">
           <a className="navbar-brand mt-3" href="homePage.html">
-            <img
-              src="images/Spotify_Logo_CMYK_White.png"
-              width="140"
-              height="42"
-            />
+            <img src={Logo} width="140" height="42" />
           </a>
           <div className="collapse navbar-collapse mt-3" id="navbarNavDropdown">
             <ul className="navbar-nav">
@@ -63,7 +61,8 @@ export class Nav extends Component {
                   Album Page
                 </div>
               </Link>
-              <span className="profile-nav mb-2">
+
+              <span className="profile-nav mb-2 mr-5">
                 <li className="nav-profile-item">
                   <button type="button" className="whiteButton">
                     <Link to="/SignUp" className="text-decoration-none">
@@ -73,6 +72,7 @@ export class Nav extends Component {
                             ? "nav-link active"
                             : "nav-link"
                         }
+                        style={{ color: "black" }}
                       >
                         Sign up
                       </div>
